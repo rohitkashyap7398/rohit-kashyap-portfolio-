@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMWDE0VTD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-YMWDE0VTD3");
+  </script>
+  
+  <meta name="google-site-verification" content="zMNl24ruDnyqiliYwKNU_r09OkPCDKz0kMBtF9nqiCc" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#000" />
+  <meta name="description" content="Rohit Kashyap | Portfolio - Web Developer & Digital Artist creating innovative web experiences with modern design and cutting-edge technology." />
+  <meta name="keywords" content="Rohit Kashyap, Web Developer, Digital Artist, Frontend Developer, UI/UX Designer, Portfolio" />
+  <meta name="author" content="Rohit Kashyap" />
+  <meta property="og:title" content="Rohit Kashyap | Portfolio" />
+  <meta property="og:description" content="Web Developer & Digital Artist creating innovative web experiences with modern design and cutting-edge technology." />
+  <meta property="og:site_name" content="Rohit Kashyap Portfolio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rohit Kashyap | Portfolio" />
+  <meta name="twitter:description" content="Web Developer & Digital Artist creating innovative web experiences with modern design and cutting-edge technology." />
+  
+  <title>Rohit Kashyap | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Fira+Code&family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  
+  <!-- Water CSS Effect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css" />
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="body dark-mode">
+  <!-- Water Animation Background -->
+  <div class="water-bg"></div>
+  
+  <!-- Floating Elements -->
+  <div class="floating-elements">
+    <div class="float-1"></div>
+    <div class="float-2"></div>
+    <div class="float-3"></div>
+    <div class="float-4"></div>
+    <div class="float-5"></div>
+  </div>
+  
+  <!-- Magic Mode Toggle -->
+  <div class="magic-mode-toggle">
+    <input type="checkbox" id="magic-switch" onclick="toggleMagicMode()" />
+    <label for="magic-switch" class="magic-label" tabindex="0" aria-label="Toggle Magic Mode">
+      <i class="fas fa-hat-wizard"></i>
+      <span class="magic-text">Magic Mode</span>
+    </label>
+  </div>
+  
+  <!-- Audio -->
+  <audio loop id="audioPlayer" style="display: none">
+    <source src="ambient.mp3" type="audio/mp3" />
+  </audio>
+  
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="water-loader">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+      <div class="loader-text">Rohit Kashyap</div>
+      <div class="loader-subtext">Loading Creative Universe...</div>
+    </div>
+  </div>
+  
+  <noscript>Please enable JavaScript to view this website.</noscript>
+  
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-circle" id="cursor-circle"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="navbar" id="navbar">
+      <div class="logo" tabindex="0" aria-label="Rohit Kashyap logo">
+        <div class="logo-container">
+          <div class="logo-image-wrapper">
+            <img src="Rohit (2).png" alt="Rohit Kashyap" class="logo-img" id="nav-avatar" />
+            <div class="logo-glow"></div>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Rohit</span>
+            <span class="logo-title">Kashyap</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
+          <li class="home activeThistab" data-aos="fade-down">
+            <a href="#home" class="nav-link">
+              <span class="nav-icon"><i class="fas fa-home"></i></span>
+              <span class="nav-text">Home</span>
+            </a>
+          </li>
+          <li class="about" data-aos="fade-down" data-aos-delay="100">
+            <a href="#about" class="nav-link">
+              <span class="nav-icon"><i class="fas fa-user"></i></span>
+              <span class="nav-text">About</span>
+            </a>
+          </li>
+          <li class="skills" data-aos="fade-down" data-aos-delay="200">
+            <a href="#skills" class="nav-link">
+              <span class="nav-icon"><i class="fas fa-code"></i></span>
+              <span class="nav-text">Skills</span>
+            </a>
+          </li>
+          <li class="projects" data-aos="fade-down" data-aos-delay="300">
+            <a href="#projects" class="nav-link">
+              <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+              <span class="nav-text">Projects</span>
+            </a>
+          </li>
+          <li class="contact" data-aos="fade-down" data-aos-delay="400">
+            <a href="#contact" class="nav-link">
+              <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+              <span class="nav-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <!-- Settings Panel -->
+      <div class="settings-panel">
+        <button class="settings-btn" onclick="toggleSettings()" aria-label="Settings">
+          <i class="fas fa-cog"></i>
+        </button>
+        
+        <div class="settings-menu" id="settings-menu">
+          <div class="setting-item">
+            <span class="setting-label">Theme</span>
+            <div class="theme-switcher">
+              <button class="theme-btn active" data-theme="dark" onclick="changeTheme('dark')">
+                <i class="fas fa-moon"></i>
+                Dark
+              </button>
+              <button class="theme-btn" data-theme="light" onclick="changeTheme('light')">
+                <i class="fas fa-sun"></i>
+                Light
+              </button>
+              <button class="theme-btn" data-theme="blue" onclick="changeTheme('blue')">
+                <i class="fas fa-water"></i>
+                Blue
+              </button>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <span class="setting-label">Sound</span>
+            <div class="sound-toggle">
+              <input type="checkbox" id="sound-toggle" onclick="toggleSound()" />
+              <label for="sound-toggle" class="sound-switch">
+                <span class="sound-slider"></span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="setting-item">
+            <span class="setting-label">Particles</span>
+            <div class="particles-toggle">
+              <input type="checkbox" id="particles-toggle" checked onclick="toggleParticles()" />
+              <label for="particles-toggle" class="particles-switch">
+                <span class="particles-slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span class="hamburger-line line1"></span>
+        <span class="hamburger-line line2"></span>
+        <span class="hamburger-line line3"></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <div class="mobile-logo">
+          <img src="R.k.jpeg" alt="Rohit Kashyap" class="logo-img" />
+          <div class="logo-text">
+            <h2>Rohit Kashyap</h2>
+            <p class="logo-subtitle">Web Developer</p>
+          </div>
+        </div>
+        <button class="mobile-close" onclick="toggleMobileMenu()" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-ul">
+          <li>
+            <a href="#home" onclick="toggleMobileMenu()" class="nav-link">
+              <div class="nav-icon">
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="nav-text">
+                <span>Home</span>
+                <small>Welcome page</small>
+              </div>
+              <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#about" onclick="toggleMobileMenu()" class="nav-link">
+              <div class="nav-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="nav-text">
+                <span>About</span>
+                <small>Know more about me</small>
+              </div>
+              <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" onclick="toggleMobileMenu()" class="nav-link">
+              <div class="nav-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="nav-text">
+                <span>Skills</span>
+                <small>My expertise</small>
+              </div>
+              <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onclick="toggleMobileMenu()" class="nav-link">
+              <div class="nav-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <div class="nav-text">
+                <span>Projects</span>
+                <small>My portfolio</small>
+              </div>
+              <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onclick="toggleMobileMenu()" class="nav-link">
+              <div class="nav-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="nav-text">
+                <span>Contact</span>
+                <small>Get in touch</small>
+              </div>
+              <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="mobile-menu-footer">
+        <p class="footer-text">Connect with me</p>
+        <div class="mobile-social">
+          <a href="https://github.com/rohitkashyap" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/rohitkashyap" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://instagram.com/rohitkashyap" target="_blank" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/rohitkashyap" target="_blank" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+        <p class="copyright">© 2023 Rohit Kashyap. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text" data-aos="fade-right">
+            <div class="hero-badge">
+              <span class="badge-text">Available for Work</span>
+              <div class="badge-dot"></div>
+            </div>
+            
+            <h1 class="hero-title">
+              <span class="title-line">Hello, I'm</span>
+              <span class="title-gradient">Rohit Kashyap</span>
+            </h1>
+            
+            <div class="hero-subtitle">
+              <span class="typed-text" id="typed-text"></span>
+              <span class="cursor">&nbsp;</span>
+            </div>
+            
+            <p class="hero-description">
+              I create <span class="highlight">digital experiences</span> that blend innovative design with 
+              cutting-edge technology. Specializing in web development and digital art, 
+              I transform ideas into interactive realities.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <span>Get In Touch</span>
+                <i class="fas fa-paper-plane"></i>
+              </a>
+              <a href="assets/pdf/resume.pdf" class="btn btn-secondary" download>
+                <span>Download CV</span>
+                <i class="fas fa-download"></i>
+              </a>
+            </div>
+            
+            <div class="hero-stats">
+              <div class="stat">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="3">0</div>
+                <div class="stat-label">Years</div>
+              </div>
+              <div class="stat">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Clients</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="hero-image" data-aos="fade-left">
+            <div class="image-container">
+              <div class="image-wrapper">
+                <img src="R.k.jpeg" alt="Rohit Kashyap" class="profile-image" />
+                <div class="image-frame"></div>
+                <div class="image-glow"></div>
+                <div class="image-reflection"></div>
+              </div>
+              
+              <div class="floating-tech">
+                <div class="tech-icon" style="--i:1">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-icon" style="--i:2">
+                  <i class="fab fa-js"></i>
+                </div>
+                <div class="tech-icon" style="--i:3">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-icon" style="--i:4">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <div class="tech-icon" style="--i:5">
+                  <i class="fab fa-node-js"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-scroll">
+          <div class="scroll-text">Scroll Down</div>
+          <div class="scroll-icon">
+            <div class="mouse">
+              <div class="wheel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Get to Know Me</span>
+          <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right">
+            <div class="about-image-container">
+              <img src="Rohit (2).png" alt="Rohit Kashyap" class="about-img" />
+              <div class="about-shape shape-1"></div>
+              <div class="about-shape shape-2"></div>
+              <div class="about-shape shape-3"></div>
+              <div class="about-badge">
+                <i class="fas fa-award"></i>
+                <span>3+ Years Experience</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-text" data-aos="fade-left">
+            <h3 class="about-heading">Crafting Digital Experiences</h3>
+            <div class="about-description">
+              <p>
+                Hi! I'm <span class="highlight">Rohit Kashyap</span>, a passionate web developer and digital artist 
+                with over 3 years of experience creating innovative digital solutions.
+              </p>
+              <p>
+                My journey began with digital art, which evolved into a deep fascination with 
+                web technologies. Today, I specialize in creating responsive, user-friendly 
+                websites and applications that not only look great but also perform exceptionally.
+              </p>
+              <p>
+                I believe in <span class="highlight">clean code</span>, <span class="highlight">intuitive design</span>, and 
+                <span class="highlight">meaningful interactions</span>. Every project is an opportunity 
+                to learn, innovate, and create something memorable.
+              </p>
+            </div>
+            
+            <div class="about-info">
+              <div class="info-item">
+                <span class="info-label">Name:</span>
+                <span class="info-value">Rohit Kashyap</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Email:</span>
+                <span class="info-value">hello@rohitkashyap.com</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Location:</span>
+                <span class="info-value">Jaipur, India</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Available:</span>
+                <span class="info-value">Freelance & Full-time</span>
+              </div>
+            </div>
+            
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Hire Me</span>
+                <i class="fas fa-handshake"></i>
+              </a>
+              <a href="#projects" class="btn btn-outline">
+                <span>View Projects</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-features" data-aos="fade-up">
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h4 class="feature-title">UI/UX Design</h4>
+            <p class="feature-text">Creating intuitive and beautiful user interfaces</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4 class="feature-title">Web Development</h4>
+            <p class="feature-text">Building robust and scalable web applications</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4 class="feature-title">Responsive Design</h4>
+            <p class="feature-text">Perfect experience across all devices</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4 class="feature-title">Performance</h4>
+            <p class="feature-text">Optimized for speed and efficiency</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">My Capabilities</span>
+          <h2 class="section-title">Skills & <span class="title-accent">Expertise</span></h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="skills-content">
+          <div class="skills-categories" data-aos="fade-right">
+            <div class="category-tabs">
+              <button class="category-tab active" data-category="frontend">
+                <i class="fas fa-laptop-code"></i>
+                Frontend
+              </button>
+              <button class="category-tab" data-category="backend">
+                <i class="fas fa-server"></i>
+                Backend
+              </button>
+              <button class="category-tab" data-category="tools">
+                <i class="fas fa-tools"></i>
+                Tools
+              </button>
+              <button class="category-tab" data-category="design">
+                <i class="fas fa-palette"></i>
+                Design
+              </button>
+            </div>
+            
+            <div class="skills-visual">
+              <div class="visual-chart">
+                <canvas id="skillsChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skills-list" data-aos="fade-left">
+            <div class="skills-grid active" id="frontend-skills">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">HTML5</h4>
+                    <span class="skill-level">Expert</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+                <span class="skill-percent">95%</span>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">CSS3 & Sass</h4>
+                    <span class="skill-level">Expert</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-js"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">JavaScript</h4>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">React.js</h4>
+                    <span class="skill-level">Advanced</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+                <span class="skill-percent">80%</span>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-vuejs"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">Vue.js</h4>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%"></div>
+                </div>
+                <span class="skill-percent">70%</span>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-header">
+                  <div class="skill-icon">
+                    <i class="fab fa-angular"></i>
+                  </div>
+                  <div class="skill-info">
+                    <h4 class="skill-name">Angular</h4>
+                    <span class="skill-level">Intermediate</span>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 65%"></div>
+                </div>
+                <span class="skill-percent">65%</span>
+              </div>
+            </div>
+            
+            <!-- Backend Skills Grid (hidden by default) -->
+            <div class="skills-grid" id="backend-skills" style="display: none;">
+              <!-- Backend skills would go here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">My Creative Work</span>
+          <h2 class="section-title">Featured <span class="title-accent">Projects</span></h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="projects-filter" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Development</button>
+          <button class="filter-btn" data-filter="design">UI/UX Design</button>
+          <button class="filter-btn" data-filter="react">React.js</button>
+          <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        </div>
+        
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="web react" data-aos="fade-up">
+            <div class="project-image">
+              <img src="assets/images/project1.jpg" alt="E-commerce Platform" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-badge">Featured</div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">MongoDB</span>
+              </div>
+              <h3 class="project-title">Modern E-commerce Platform</h3>
+              <p class="project-description">
+                Full-featured e-commerce solution with user authentication, payment gateway, 
+                admin dashboard, and real-time inventory management.
+              </p>
+              <div class="project-meta">
+                <span class="project-date">
+                  <i class="far fa-calendar"></i> Dec 2023
+                </span>
+                <span class="project-type">
+                  <i class="far fa-folder"></i> Web App
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-card" data-category="design web" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="R.k.jpeg" alt="Task Management" />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="#" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="project-tag">Figma</span>
+                <span class="project-tag">React</span>
+                <span class="project-tag">Firebase</span>
+              </div>
+              <h3 class="project-title">Task Management Dashboard</h3>
+              <p class="project-description">
+                Collaborative task management application with real-time updates, 
+                file sharing, and team collaboration features.
+              </p>
+              <div class="project-meta">
+                <span class="project-date">
+                  <i class="far fa-calendar"></i> Nov 2023
+                </span>
+                <span class="project-type">
+                  <i class="far fa-folder"></i> Web Design
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Add more projects as needed -->
+        </div>
+        
+        <div class="projects-cta" data-aos="fade-up">
+          <a href="https://github.com/rohitkashyap" class="btn btn-primary btn-large" target="_blank">
+            <span>View All Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-subtitle">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-card">
+              <h3 class="contact-title">Let's Work Together!</h3>
+              <p class="contact-text">
+                I'm currently available for freelance projects and full-time opportunities. 
+                Let's discuss how we can create something amazing together.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-detail">
+                    <h4>Email</h4>
+                    <a href="mailto:hello@rohitkashyap.com">hello@rohitkashyap.com</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-detail">
+                    <h4>Phone</h4>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                  </div>
+                </div>
+                
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-detail">
+                    <h4>Location</h4>
+                    <p>Jaipur, Rajasthan, India</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="contact-social">
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                  <a href="https://github.com/rohitkashyap" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/rohitkashyap" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://instagram.com/rohitkashyap" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://twitter.com/rohitkashyap" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://dribbble.com/rohitkashyap" target="_blank">
+                    <i class="fab fa-dribbble"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form" data-aos="fade-left">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Your Name *" required>
+                <div class="input-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Your Email *" required>
+                <div class="input-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" placeholder="Subject *" required>
+                <div class="input-icon">
+                  <i class="fas fa-tag"></i>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Your Message *" required></textarea>
+                <div class="input-icon">
+                  <i class="fas fa-comment"></i>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="Rohit (2).png" alt="Rohit Kashyap" />
+            <div class="footer-logo-text">
+              <h3>Rohit Kashyap</h3>
+              <p>Web Developer & Digital Artist</p>
+            </div>
+          </div>
+          <p class="footer-quote">
+            "Transforming ideas into digital experiences through code and creativity."
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4 class="footer-title">Services</h4>
+            <ul>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">UI/UX Design</a></li>
+              <li><a href="#">Mobile Apps</a></li>
+              <li><a href="#">Digital Art</a></li>
+              <li><a href="#">Consulting</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4 class="footer-title">Contact Info</h4>
+            <ul>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>hello@rohitkashyap.com</span>
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>+91 98765 43210</span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Jaipur, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2023 Rohit Kashyap. All rights reserved.</p>
+          <p>Made with <i class="fas fa-heart"></i> in India</p>
+        </div>
+        
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookies Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
